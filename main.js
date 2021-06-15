@@ -8,6 +8,11 @@ objectDetector('cocossd',modelLoaded);
 document.getElementById("status").innerHTML="status:Detecting objects";
 
 }
+function modelLoaded(){
+    console.log("Model Loaded!")
+    status=true;
+    objectDetector.detect(img,gotResult);
+}
 function preload(){
     img=loadImage('dog_cat.jpg');
 }
